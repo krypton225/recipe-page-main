@@ -7,7 +7,7 @@
         "dev": "concurrently --prefix-colors=\"magenta,cyan,yellow,red\" \"npm run server\" \"npm run build-css\" \"npm run pug-js\"",
         "server": "live-server --open=./index.html",
         "pug-js": "pug ./src/pug-js/index.pug --out ./ --watch --pretty",
-        "build-css": "npx tailwind -i ./src/styles.css -o ./public/output.css --watch",
+        "build-css": "npx tailwind -i ./src/styles.css -o ./public/css/styles.css --watch",
         "tags": "git push repo --tags",
         "gen:lock": "npm i --package-lock-only"
     },
