@@ -4,7 +4,12 @@
     "description": "Just a challenge in front end mentor website",
     "main": "index.js",
     "scripts": {
-        "dev": "pug ./src/pug-js/index.pug --out ./ --watch --pretty"
+        "dev": "concurrently --prefix-colors=\"magenta,cyan,yellow,red\" \"npm run server\" \"npm run build-css\" \"npm run pug-js\"",
+        "server": "live-server --open=./index.html",
+        "pug-js": "pug ./src/pug-js/index.pug --out ./ --watch --pretty",
+        "build-css": "npx tailwind -i ./src/styles.css -o ./public/output.css --watch",
+        "tags": "git push repo --tags",
+        "gen:lock": "npm i --package-lock-only"
     },
     "keywords": [
         "HTML",
@@ -15,7 +20,10 @@
     "author": "Khaled Mohamed",
     "license": "MIT",
     "devDependencies": {
+        "concurrently": "^8.2.2",
+        "live-server": "^1.2.2",
         "pug": "^3.0.2",
-        "tailwindcss": "^3.4.1"
+        "tailwindcss": "^3.4.1",
+        "tailwindcss-cli": "^0.1.2"
     }
 }
