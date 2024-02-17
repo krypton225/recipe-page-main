@@ -4,13 +4,13 @@ doctype html
 html(lang="en")
     head
         +meta-data("Khaled Mohamed")
-        
+
         +meta-desc("Just a description!")
 
         +meta-words("HTML, CSS, JS, TailwindCSS, PugJS, Front End Challenge, Front End Mentor")
 
-        link(rel="shortcut icon", href="./public/assets/favicons/favicon.ico", type="image/x-icon")
-        link(rel="manifest", href="./public/assets/favicons/site.webmanifest")
+        link(rel="shortcut icon" href="./public/assets/favicons/favicon.ico" type="image/x-icon")
+        link(rel="manifest" href="./public/assets/favicons/site.webmanifest")
 
         +space()
 
@@ -18,6 +18,33 @@ html(lang="en")
 
         +space()
 
-        link(rel="stylesheet", href="./public/css/styles.css")
-    body 
+        link(rel="stylesheet" href="./public/css/styles.css")
+
+    body(class="bg-eggshell selection:text-rose-white selection:bg-nutmeg scrollbar-thin scrollbar-thumb-nutmeg scrollbar-track-rose-white") 
+        main.main#main(class="container max-w-screen-md mt-0 sm:my-10 pt-0 pb-5 xs:py-[1rem] sm:py-[2.5rem] bg-rose-white rounded-none sm:rounded-3xl")
+            section(class="rounded-none sm:rounded-3xl px-0" id="image-header")
+                img(src="./public/assets/images/image-omelette.webp"
+                    alt="The header image which contains Omelette picture."
+                    class="w-[100%] rounded-none sm:rounded-3xl object-cover")
+
+            section(class="my-10 px-6 sm:px-0")
+                span(class="block mb-7 font-young text-3xl sm:text-4xl") Simple Omelette Recipe
+
+                p(class="leading-normal font-outfit text-lg") An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.
+
+            +space()
+
+            section(class="my-14 ps-[2.5rem] bg-rose-white")
+                span(class="text-dark-raspberry text-[1.88rem]") Preparation time
+
+                ul(class="ps-[2.7rem]")
+                    - 
+                        const arrayOfPoints = [
+                            { title: "Total: ", desc: "Approximately 10 minutes" },
+                            { title: "Preparation: ", desc: "5 minutes" },
+                            { title: "Cooking: ", desc: "5 minutes" }
+                        ]
+                    
+                    each item in arrayOfPoints
+                        li(class="relative text-lg before:content-[''] before:w-[5px] before:h-[5px] before:rounded-full before:absolute before:top-[50%] before:translate-y-[-50%] before:left-[-5%] before:bg-dark-raspberry") #{item.title} #{item.desc}
         +no-script()
