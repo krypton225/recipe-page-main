@@ -11,6 +11,14 @@ module.exports = {
       "wenge-brown": "hsl(30, 10%, 34%)",
       "dark-charcoal": "hsl(24, 5%, 18%)",
     },
+    container: {
+      center: true,
+      padding: {
+        xs: "1rem",
+        sm: "2.5rem",
+        md: "3rem"
+      }
+    },
     extend: {
       fontFamily: {
         "outfit": ["Outfit", "sans-serif"],
@@ -19,6 +27,7 @@ module.exports = {
     },
   },
   plugins: [
+    require('tailwind-scrollbar'),
     (process.env.NODE_ENV === 'production' ? { cssnano: {} } : {})
   ],
 };
