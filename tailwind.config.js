@@ -27,7 +27,6 @@ module.exports = {
     },
   },
   plugins: [
-    require('tailwind-scrollbar'),
     (process.env.NODE_ENV === 'production' ? { cssnano: {} } : {})
   ],
 };

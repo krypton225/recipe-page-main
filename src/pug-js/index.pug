@@ -20,7 +20,7 @@ html(lang="en")
 
         link(rel="stylesheet" href="./public/css/styles.css")
 
-    body(class="bg-eggshell selection:text-rose-white selection:bg-nutmeg scrollbar-thin scrollbar-thumb-nutmeg scrollbar-track-rose-white") 
+    body(class="bg-eggshell selection:text-rose-white selection:bg-nutmeg") 
         main.main#main(class="container max-w-screen-md mt-0 sm:my-10 pt-0 pb-5 xs:py-[1rem] sm:py-[2.5rem] bg-rose-white rounded-none sm:rounded-3xl")
             section(class="rounded-none sm:rounded-3xl px-0" id="image-header")
                 img(src="./public/assets/images/image-omelette.webp"
@@ -34,8 +34,8 @@ html(lang="en")
 
             +space()
 
-            section(class="my-14 ps-[2.5rem] bg-rose-white")
-                span(class="text-dark-raspberry text-[1.88rem]") Preparation time
+            section(class="mt-14 ps-[2.5rem] bg-rose-white")
+                span(class="text-dark-raspberry text-[1.88rem] font-medium") Preparation time
 
                 ul(class="ps-[2.7rem]")
                     - 
@@ -47,4 +47,74 @@ html(lang="en")
                     
                     each item in arrayOfPoints
                         li(class="relative text-lg before:content-[''] before:w-[5px] before:h-[5px] before:rounded-full before:absolute before:top-[50%] before:translate-y-[-50%] before:left-[-5%] before:bg-dark-raspberry") #{item.title} #{item.desc}
+
+            section(class="section-style border-b border-solid border-[#c9c9c9] px-6 sm:ps-2")
+                span(class="section-header") ingredients
+
+                ul(class="list-disc list-outside marker:text-nutmeg ps-7" role="list")
+                    -
+                        const ingredientsArray = [
+                            { text: "2-3 large eggs" },
+                            { text: "Salt, to taste" },
+                            { text: "Pepper, to taste" },
+                            { text: "1 tablespoon of butter or oil" },
+                            { text: "Optional fillings: cheese, diced vegetables, cooked meats, herbs" },
+                        ]
+                    each item in ingredientsArray
+                        li(class="my-5 text-[1.16rem]") #{item.text}
+
+            section(class="section-style")
+                span(class="section-header") instructions
+
+                ul(class="list-decimal list-outside marker:text-nutmeg marker:font-medium ps-7" role="list")
+                    -
+                        const instructionsArray = [
+                            {   
+                                title: "Beat the eggs",
+                                description: "In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. You can add a tablespoon of water or milk for a fluffier texture."
+                            },
+                            {   
+                                title: "Heat the pan",
+                                description: "Place a non-stick frying pan over medium heat and add butter or oil."
+                            },
+                            {   
+                                title: "Cook the omelette",
+                                description: "Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure the eggs evenly coat the surface."
+                            },
+                            {   
+                                title: "Add fillings (optional)",
+                                description: "When the eggs begin to set at the edges but are still slightly runny in the middle, sprinkle your chosen fillings over one half of the omelette."
+                            },
+                            {   
+                                title: "Fold and serve",
+                                description: "As the omelette continues to cook, carefully lift one edge and fold it over the fillings. Let it cook for another minute, then slide it onto a plate."
+                            },
+                            {   
+                                title: "Enjoy",
+                                description: "Serve hot, with additional salt and pepper if needed."
+                            },
+                        ]
+                    each item in instructionsArray
+                        li(class="my-5 ps-[1.5rem] text-[1.16rem]")
+                            span(class="font-medium") #{item.title}: 
+                            span(class="") #{item.description}
+
+            section(class="section-style")
+                span(class="section-header") nutrition
+
+                p(class="my-6 text-[1.16rem]") The table below shows nutritional values per serving without the additional fillings.
+
+                ul(class="list-none")
+                    - 
+                        const nutritionArray = [
+                            { title: "calories", value: "277kcal" },
+                            { title: "carbs", value: "0g" },
+                            { title: "protein", value: "20g" },
+                            { title: "fat", value: "22g" },
+                        ]
+
+                    each item in nutritionArray
+                        li(class="w-full grid grid-cols-2 py-5 ps-8 border-b border-solid border-[#c9c9c9] text-[1.16rem]")
+                            span(class="capitalize") #{item.title}
+                            span(class="text-nutmeg font-bold") #{item.value}
         +no-script()

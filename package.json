@@ -8,6 +8,7 @@
         "server": "live-server --open=./index.html",
         "pug-js": "pug ./src/pug-js/index.pug --out ./ --watch --pretty",
         "build-css": "npx tailwind -i ./src/styles.css -o ./public/css/styles.css --watch",
+        "css-production": "npx tailwind -i ./src/styles.css -o ./public/css/styles.css --minify",
         "tags": "git push repo --tags",
         "gen:lock": "npm i --package-lock-only"
     },

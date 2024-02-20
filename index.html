@@ -20,24 +20,46 @@
     
     <link rel="stylesheet" href="./public/css/styles.css">
   </head>
-  <body class="bg-eggshell selection:text-rose-white selection:bg-nutmeg scrollbar-thin scrollbar-thumb-nutmeg scrollbar-track-rose-white"> 
+  <body class="bg-eggshell selection:text-rose-white selection:bg-nutmeg"> 
     <main class="main container max-w-screen-md mt-0 sm:my-10 pt-0 pb-5 xs:py-[1rem] sm:py-[2.5rem] bg-rose-white rounded-none sm:rounded-3xl" id="main">
       <section class="rounded-none sm:rounded-3xl px-0" id="image-header"><img class="w-[100%] rounded-none sm:rounded-3xl object-cover" src="./public/assets/images/image-omelette.webp" alt="The header image which contains Omelette picture."></section>
       <section class="my-10 px-6 sm:px-0"><span class="block mb-7 font-young text-3xl sm:text-4xl">Simple Omelette Recipe</span>
         <p class="leading-normal font-outfit text-lg">An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.</p>
       </section> 
       
-      <section class="my-14 ps-[2.5rem] bg-rose-white"><span class="text-dark-raspberry text-[1.88rem]">Preparation time</span>
+      <section class="mt-14 ps-[2.5rem] bg-rose-white"><span class="text-dark-raspberry text-[1.88rem] font-medium">Preparation time</span>
         <ul class="ps-[2.7rem]">
-          <li class="relative text-lg before:content-[''] before:w-[5px] before:h-[5px] before:rounded-full before:absolute before:top-[50%] before:translate-y-[-50%] before:left-[-5%] before:bg-dark-raspberry">
-            <Total: >Approximately 10 minutes</Total: >
-          </li>
-          <li class="relative text-lg before:content-[''] before:w-[5px] before:h-[5px] before:rounded-full before:absolute before:top-[50%] before:translate-y-[-50%] before:left-[-5%] before:bg-dark-raspberry">
-            <Preparation: >5 minutes</Preparation: >
-          </li>
-          <li class="relative text-lg before:content-[''] before:w-[5px] before:h-[5px] before:rounded-full before:absolute before:top-[50%] before:translate-y-[-50%] before:left-[-5%] before:bg-dark-raspberry">
-            <Cooking: >5 minutes</Cooking: >
-          </li>
+          <li class="relative text-lg before:content-[''] before:w-[5px] before:h-[5px] before:rounded-full before:absolute before:top-[50%] before:translate-y-[-50%] before:left-[-5%] before:bg-dark-raspberry">Total:  Approximately 10 minutes</li>
+          <li class="relative text-lg before:content-[''] before:w-[5px] before:h-[5px] before:rounded-full before:absolute before:top-[50%] before:translate-y-[-50%] before:left-[-5%] before:bg-dark-raspberry">Preparation:  5 minutes</li>
+          <li class="relative text-lg before:content-[''] before:w-[5px] before:h-[5px] before:rounded-full before:absolute before:top-[50%] before:translate-y-[-50%] before:left-[-5%] before:bg-dark-raspberry">Cooking:  5 minutes</li>
+        </ul>
+      </section>
+      <section class="section-style border-b border-solid border-[#c9c9c9] px-6 sm:ps-2"><span class="section-header">ingredients</span>
+        <ul class="list-disc list-outside marker:text-nutmeg ps-7" role="list">
+          <li class="my-5 text-[1.16rem]">2-3 large eggs</li>
+          <li class="my-5 text-[1.16rem]">Salt, to taste</li>
+          <li class="my-5 text-[1.16rem]">Pepper, to taste</li>
+          <li class="my-5 text-[1.16rem]">1 tablespoon of butter or oil</li>
+          <li class="my-5 text-[1.16rem]">Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+        </ul>
+      </section>
+      <section class="section-style"><span class="section-header">instructions</span>
+        <ul class="list-decimal list-outside marker:text-nutmeg marker:font-medium ps-7" role="list">
+          <li class="my-5 ps-[1.5rem] text-[1.16rem]"><span class="font-medium">Beat the eggs: </span><span>In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. You can add a tablespoon of water or milk for a fluffier texture.</span></li>
+          <li class="my-5 ps-[1.5rem] text-[1.16rem]"><span class="font-medium">Heat the pan: </span><span>Place a non-stick frying pan over medium heat and add butter or oil.</span></li>
+          <li class="my-5 ps-[1.5rem] text-[1.16rem]"><span class="font-medium">Cook the omelette: </span><span>Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure the eggs evenly coat the surface.</span></li>
+          <li class="my-5 ps-[1.5rem] text-[1.16rem]"><span class="font-medium">Add fillings (optional): </span><span>When the eggs begin to set at the edges but are still slightly runny in the middle, sprinkle your chosen fillings over one half of the omelette.</span></li>
+          <li class="my-5 ps-[1.5rem] text-[1.16rem]"><span class="font-medium">Fold and serve: </span><span>As the omelette continues to cook, carefully lift one edge and fold it over the fillings. Let it cook for another minute, then slide it onto a plate.</span></li>
+          <li class="my-5 ps-[1.5rem] text-[1.16rem]"><span class="font-medium">Enjoy: </span><span>Serve hot, with additional salt and pepper if needed.</span></li>
+        </ul>
+      </section>
+      <section class="section-style"><span class="section-header">nutrition</span>
+        <p class="my-6 text-[1.16rem]">The table below shows nutritional values per serving without the additional fillings.</p>
+        <ul class="list-none">
+          <li class="w-full grid grid-cols-2 py-5 ps-8 border-b border-solid border-[#c9c9c9] text-[1.16rem]"><span class="capitalize">calories</span><span class="text-nutmeg font-bold">277kcal</span></li>
+          <li class="w-full grid grid-cols-2 py-5 ps-8 border-b border-solid border-[#c9c9c9] text-[1.16rem]"><span class="capitalize">carbs</span><span class="text-nutmeg font-bold">0g</span></li>
+          <li class="w-full grid grid-cols-2 py-5 ps-8 border-b border-solid border-[#c9c9c9] text-[1.16rem]"><span class="capitalize">protein</span><span class="text-nutmeg font-bold">20g</span></li>
+          <li class="w-full grid grid-cols-2 py-5 ps-8 border-b border-solid border-[#c9c9c9] text-[1.16rem]"><span class="capitalize">fat</span><span class="text-nutmeg font-bold">22g</span></li>
         </ul>
       </section>
     </main> 

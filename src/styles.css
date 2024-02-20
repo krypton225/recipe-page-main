@@ -111,3 +111,13 @@
     src: url('../fonts/young-serif/young-serif-v2-latin-regular.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+
+@layer components {
+    .section-style {
+        @apply pt-12 pb-8 px-6 sm:ps-2;
+    }
+
+    .section-header {
+        @apply text-nutmeg text-3xl font-young capitalize;
+    }
+}
